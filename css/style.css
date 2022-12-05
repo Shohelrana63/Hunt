@@ -484,6 +484,7 @@ body{
     top: 52px;
     left: 50%;
     transform: translateX(-50%);
+    width: 2px;
 }
 .service{
     display: flex;
@@ -564,4 +565,202 @@ body{
 }
 #service-part .slick-center .service-right {
     filter: drop-shadow(0px 2px 3px #bdb3b3);
+}
+
+/* Team part css start */
+#team-part{
+    background: url(../images/team-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 180px;
+    padding-bottom: 90px;
+    position: relative;
+    z-index: 1;
+    clip-path: polygon(0 13%, 100% 0%, 100% 87%, 0% 100%);
+
+}
+#team-part::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: -1;
+}
+#team-part .item .round-shape{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    text-align: center;
+    background: #cccccc;
+    overflow: hidden;
+    position: relative;
+}
+#team-part .item .round-shape:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+#team-part .item .round-shape img{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#team-part .item .round-shape::before{
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background: #cccccc;
+    transition: .4s;
+}
+#team-part .item-slider .item{
+    margin: 30px 0;
+    display: flex;
+    justify-content: center;
+}
+#team-part .slider-line {
+    position: relative;
+}
+#team-part .item.slick-center .round-shape::before {
+    opacity: 0;
+}
+#team-part .item.slick-center .round-shape{
+    background: #f5c600;
+    transform: scale(1.2);
+    transition: all linear 0.5s;
+}
+
+#team-part .item.slick-center .round-shape:after {
+    opacity: 0;
+}
+#team-part .line {
+    background: url(../images/team-line.png);
+    width: 2px;
+    height: 528px;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#team-part .team-up {
+    font-size: 18px;
+    height: 39px;
+    width: 39px;
+    text-align: center;
+    line-height: 39px;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all linear 0.5s;
+}
+
+#team-part .team-up:hover {
+    background: #fec600;
+    border-color: #fec600;
+    color: #111111;
+}
+#team-part .team-down {
+    font-size: 18px;
+    height: 39px;
+    width: 39px;
+    text-align: center;
+    line-height: 39px;
+    color: #ffff;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    bottom: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all linear 0.5s;
+}
+
+#team-part .team-down:hover {
+    background: #fec600;
+    border-color: #fec600;
+    color: #111111;
+}
+#team-part .details .text{
+    padding: 60px 30px 108px 34px;
+    background: #f1f1f1;
+}
+#team-part .details .text h4{
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #222222;
+    text-transform: capitalize;
+}
+#team-part .details .text i{
+    font-size: 16px;
+    color: #fec600;
+    margin: 8px 0;
+}
+#team-part .details .text h5{
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #353535;
+    margin-bottom: 30px;
+}
+#team-part .details .text p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #353535;
+    line-height: 24px;
+}
+#team-part .details .text {
+    width: 852px;
+    position: relative;
+    margin-left: 30px;
+}
+#team-part .details .text::before {
+    position: absolute;
+    content: '';
+    left: -22px;
+    top: 50%;
+    transform: translateY(-50%)rotate(45deg);
+    height: 50px;
+    width: 50px;
+    border-radius: 7px;
+    background: #f1f1f1;
+}
+.demo{
+   margin-top: 60px;
+}
+#team-part .details .text .quote1 {
+    position: absolute;
+    left: 32%;
+    top: 44%;
+    transform: translateY(-50%);
+}
+#team-part .details .text .quote2 {
+    position: absolute;
+    right: 32%;
+    top: 59%;
+    transform: translateY(-50%);
+}
+#team-part .details .text .sign {
+    position: absolute;
+    right: 47px;
+    bottom: 57px;
 }
