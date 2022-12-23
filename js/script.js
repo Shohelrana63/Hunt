@@ -44,4 +44,6 @@ $(function () {
     asNavFor: '.item-slider',
   });
 
+ 
+
 })
